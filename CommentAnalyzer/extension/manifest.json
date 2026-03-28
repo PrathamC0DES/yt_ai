@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Comment Analyzer",
+  "version": "1.1",
+  "description": "Adds a button to YouTube pages to analyze comment sentiment and topics.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "http://127.0.0.1:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch?v=*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# backend/requirements.txt
+pandas
+numpy
+google-api-python-client
+langdetect
+emoji
+nltk
+scikit-learn
+sentence-transformers
+transformers
+torch
+tqdm
+Flask
+Flask-Cors
